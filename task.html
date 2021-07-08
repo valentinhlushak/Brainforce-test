@@ -9,6 +9,27 @@
 </head>
 <body>
     <div class="container">
+        <div class="thanks">
+            <div id="thanks__hello">Спасибо!</div>
+            <div id="thanks__text">Скоро с вами свяжется консультант <br>для уточнения деталей</div>
+        </div>
+        <form class="form-popup"action="">
+            <div class="popup-header">
+                <h4 class="popup-header__text">Заполните форму и закажите <br>бесплатную консультацию</h4>
+                <span class="popup-header__close">&times;</span>  
+            </div>
+            <div class="popup__text1">
+                <input id="popup__text" type="text"placeholder="Имя">
+                <div class="alertFolseName">1</div>
+            </div>
+            <div class="popup__tel1">
+                <input id="popup__tel" type="tel"placeholder="Телефон" pattern="[0-9]+">
+                <div class="alertFolsePhone">2</div>
+            </div>
+            
+            <button id="popup__button" type="submit">Заказать консультацию</button>
+        </form>
+
         <div class="header">
             <img class="header__logo" src="img/logo.svg" alt="">
             <div class="header__phone">
@@ -251,10 +272,19 @@
                     </div>
                 </div>
                 <div class="footer-content__map"></div>
-            </div>
-            
+            </div>            
         </div>
+        <!-- <form class="form-popup"action="">
+            <div class="popup-header">
+                <h4 class="popup-header__text">Заполните форму и закажите <br>бесплатную консультацию</h4>
+                <span class="popup-header__close">&times;</span>  
+            </div>
+            <input id="popup__text" type="text"placeholder="Имя">
+            <input id="popup__tel" type="tel"placeholder="Телефон">
+            <button id="popup__button">Заказать консультацию</button>
+        </form> -->
     </div>
     <script src="task.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
 </body>
 </html>

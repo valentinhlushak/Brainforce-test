@@ -27,6 +27,13 @@
         font-size: 22px;
     }
 }
+@mixin input {
+    width: 330px;
+    height: 43px;
+    border: 1px solid #828282;
+    border-radius: 8px;
+    padding-left: 20px;
+}
 *{
     padding: 0;
     margin: 0;
@@ -86,6 +93,9 @@
             font-size: 18px;
             letter-spacing: 0.2px;
             margin-right: 4.86%;
+            &:hover{
+                color: #0bb2db;
+            }
             @media(min-width:1550px){
                 font-size: 20px;
                 margin-right: 8.86%;
@@ -121,13 +131,18 @@
                 @include font();
                 white-space: nowrap;
                 &:hover{
-                    color: #828282;
+                    color: #0bb2db;
                 }
                 &:hover::after{
                     content: url(img/line.svg);
                     position: absolute;
                     bottom: 46px;
                     left: 0;
+                }
+                @media (max-width:930px){
+                    &:hover::after{
+                        display: none;      
+                    }
                 }
             }  
         }
@@ -142,6 +157,9 @@
             letter-spacing: 0.2px;
             margin-left: 6.32%;
             margin-right: 2.5%;
+            &:hover{
+                color: #0bb2db;
+            }
             @media(min-width:1550px){
                 margin-left: 8.32%;
                 margin-right: 4.5%;
@@ -172,6 +190,9 @@
             border-radius: 8px;
             background-color: #ffffff;
             cursor: pointer;
+            &:hover{
+                font-size: 16px;
+            }
         }
     }
     .main{
@@ -246,7 +267,7 @@
                     }
                     .chat__text{
                         position: absolute;
-                        z-index: 1;
+                        z-index: 3;
                         margin-top: 157px;                          
                     }
                     #chat__text{                       
@@ -505,5 +526,116 @@
         width: 290px;
     }  
 }                        
-                    
-        
+           
+// модальное окно (popup):
+.form-popup{
+    display: none;
+    flex-direction: column;
+    width: 447px;
+    height: 390px;
+    background-color: #f4f4f4;
+    border: 1px solid red;
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    margin-top: 100px;
+    margin-left: 200px;
+    box-sizing: border-box;
+    .popup-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .popup-header__text{
+            font-weight: 500;
+            font-size: 20px;
+            font-style: normal;
+            line-height: 24.8px;
+            margin: 30px 26px 40px 26px;
+            width: 395px;
+            height: 50px;
+        }
+        .popup-header__close{
+            width: 16.6px;
+            height: 16.6px;
+            cursor: pointer;
+        }
+    }
+    .popup__text1{
+        #popup__text{
+            @include input;        
+            margin-left: 26px;
+            &:hover{
+                font-size: 17px;
+            }
+        }
+        .alertFolseName{
+            font-weight: 500;
+            line-height: 16,9px;
+            color:#EB5757;
+            margin-left: 221px;
+            margin-bottom: 30px;
+        }
+    }
+    .popup__tel1{
+        #popup__tel{
+            @include input;
+            margin-left: 26px;
+            
+            &:hover{
+                font-size: 17px;
+            }
+        }
+        .alertFolsePhone{
+            font-weight: 500;
+            line-height: 16,9px;
+            color:#EB5757;
+            margin-left: 221px;
+            margin-bottom: 40px;
+        }
+    }
+    #popup__button{
+        width: 223px;
+        height: 43px;
+        background-color: #FFDB2D;
+        border: none;
+        border-radius: 8px;
+        margin-left: 26px;
+        margin-bottom: 40px;
+        font-size: 15px;
+        line-height: 18.87px;
+        box-sizing: border-box;
+        &:hover{
+            font-size: 17px;
+        }
+    }
+}
+//приветствие
+.thanks{
+    display: none;
+    width: 1147px;
+    height: 333px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:#a5ceb9d3;
+    position: fixed;
+    z-index: 1;
+    border-radius: 15px;
+    transition: all 0.5s;
+    animation: rotate linear 2s ;
+    #thanks__hello{
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 44.64px;
+        margin-bottom: 20px;
+    }
+    #thanks__text{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24.8px;
+    }
+}
+@keyframes rotate {
+    100% {transform: rotate(360deg);}
+}
