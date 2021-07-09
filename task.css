@@ -844,6 +844,13 @@
   margin-left: 221px;
   margin-bottom: 30px;
 }
+.form-popup .popup__text1 .alertOk1 {
+  font-weight: 500;
+  line-height: 16, 9px;
+  color: #219653;
+  margin-left: 221px;
+  margin-bottom: 30px;
+}
 .form-popup .popup__tel1 #popup__tel {
   width: 330px;
   height: 43px;
@@ -859,6 +866,13 @@
   font-weight: 500;
   line-height: 16, 9px;
   color: #EB5757;
+  margin-left: 221px;
+  margin-bottom: 40px;
+}
+.form-popup .popup__tel1 .alertOk2 {
+  font-weight: 500;
+  line-height: 16, 9px;
+  color: #219653;
   margin-left: 221px;
   margin-bottom: 40px;
 }

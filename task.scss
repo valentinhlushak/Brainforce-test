@@ -525,8 +525,7 @@
     @media (max-width:500px){
         width: 290px;
     }  
-}                        
-           
+}                            
 // модальное окно (popup):
 .form-popup{
     display: none;
@@ -534,7 +533,6 @@
     width: 447px;
     height: 390px;
     background-color: #f4f4f4;
-    border: 1px solid red;
     border-radius: 8px;
     position: fixed;
     z-index: 1;
